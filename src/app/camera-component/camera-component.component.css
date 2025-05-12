@@ -1,0 +1,17 @@
+
+mat-card {
+  background-color: white;
+  margin: 5%;
+  padding: 5%;
+}
+
+.spinner-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+
+h2 {
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-header>
+        2. General coding problem
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="code-example">
+      <code>
+        // Required ranges
+        const required: CameraRange = {{ '{' }}
+          distance: [1, 10],
+          light: [100, 1000]
+        {{ '}' }};
+
+        // Available hardware cameras
+        const hardwareCameras: CameraRange[] = [
+          {{ '{' }} distance: [1, 5], light: [100, 800] {{ '}' }},
+          {{ '{' }} distance: [5, 10], light: [300, 1000] {{ '}' }}
+        ];
+      </code>
+    </div>
+        <p *ngIf="isCovered; else notCovered">
+            All requirements are fully covered by available hardware cameras.
+        </p>
+
+        <ng-template #notCovered>
+            The camera setup does not fully cover the required distance or light ranges.
+        </ng-template>
+    </mat-card-content>
+</mat-card>

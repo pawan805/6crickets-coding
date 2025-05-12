@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    1. Angular coding problem
+  </mat-card-header>
+  <mat-card-content *ngIf="secondsLeft > 0; else expired">
+    <div class="spinner-container">
+      <mat-progress-spinner class="example-margin" [color]="color" [mode]="'determinate'"
+        [value]="(secondsLeft / 10) * 100">
+      </mat-progress-spinner>
+    </div>
+    <h2>Seconds left to deadline: {{ secondsLeft }}</h2>
+  </mat-card-content>
+
+  <ng-template #expired>
+    <h2>Deadline has passed.</h2>
+  </ng-template>
+</mat-card>
